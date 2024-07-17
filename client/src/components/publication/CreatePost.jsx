@@ -1,36 +1,28 @@
-import { useState } from "react"
-import { Input } from "../ui/input"
-import { Button } from "../ui/button"
-import { BsImage } from "react-icons/bs"
-import { Textarea } from "../ui/textarea"
+import { useState } from "react";
+import { Input } from "../ui/input";
+import CreatePostDialog from "./CreatePostDialog"
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-
 
 
 export default function CreatePost() {
     /**
      * ! STATE (état, données) de l'application
      */
-
     const [open, setOpen] = useState(false)
-
-
 
     /**
      * ! COMPORTEMENT (méthodes, fonctions) de l'application
      */
+    // Ouvrir ou fermer la boîte de dialogue
     const toggleDialog = () => {
         setOpen(!open)
     }
-
-
 
     /**
      * ! AFFICHAGE (render) de l'application
      */
     return (
-        <div className="bg-white p-4 rounded-lg shadow mb-4 ">
+        <div className="bg-white p-4 rounded-lg shadow mb-4">
             <div className="flex items-center space-x-4">
                 <Avatar className="w-10 h-10 shadow">
                     <AvatarImage src="" alt="User Avatar" />
@@ -46,49 +38,7 @@ export default function CreatePost() {
                 />
             </div>
 
-            <Dialog open={open} onOpenChange={toggleDialog}>
-                <DialogContent className="max-w-xl p-4">
-
-                    <DialogHeader className="flex justify-between items-center">
-                        <DialogTitle>Créer une publication</DialogTitle>
-                    </DialogHeader>
-
-                    <div className="flex items-center space-x-4 mb-4">
-                        <Avatar className="w-10 h-10 shadow">
-                            <AvatarImage src="" alt="User Avatar" />
-                            <AvatarFallback>CN</AvatarFallback>
-                        </Avatar>
-                        <div className="flex flex-col">
-                            <p className="font-semibold">Cousema Abdillah</p>
-                            <p className="text-sm text-gray-500">Ami(e)s</p>
-                        </div>
-                    </div>
-
-                    <Textarea
-                        placeholder="Quoi de neuf, Cousema ?"
-                        className="w-full mb-4"
-                        rows={4}
-                    />
-
-                    <div className="border rounded-lg p-4 mb-4">
-                        <label className="flex flex-col items-center justify-center h-32 border-dashed border-2 border-gray-300 rounded-lg cursor-pointer">
-                            <input
-                                type="file"
-                                className="hidden"
-                            // onChange={handleFileChange}
-                            />
-                            <BsImage className="text-gray-500 w-10 h-10 mb-2" />
-                            <p className="text-gray-500">Ajouter des photos/vidéos</p>
-                            <p className="text-gray-500">ou faites glisser-déposer</p>
-                        </label>
-                    </div>
-
-                    <DialogFooter>
-                        <Button className="w-full bg-cyan-700 text-white">Publier</Button>
-                    </DialogFooter>
-
-                </DialogContent>
-            </Dialog>
+            <CreatePostDialog open={open} onClose={toggleDialog} />
         </div>
     );
 }
