@@ -20,9 +20,9 @@ export default function Home() {
      */
     return (
         <>
-              <main className="container min-h-screen flex items-start p-4">
+              <div className="mx-72 min-h-screen flex items-start p-4 bg-slate-100">
                 <CreatePost  />
-            </main>
+            </div>
         </>
     )
 }
