@@ -32,7 +32,7 @@ export default function CreatePost() {
      * ! AFFICHAGE (render) de l'application
      */
     return (
-        <div className="bg-white p-4 rounded-lg shadow mb-4">
+        <div className="bg-white p-4 rounded-lg shadow mb-4 w-full">
             <div className="flex items-center space-x-4">
                 <Avatar className="w-10 h-10 shadow">
                     <AvatarImage src="" alt="User Avatar" />

@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button"
+import CreatePost from "@/components/CreatePost"
+
+
 
 
 export default function Home() {
@@ -17,8 +19,10 @@ export default function Home() {
      * ! AFFICHAGE (render) de l'application
      */
     return (
-        <div>
-            <Button>Click me</Button>
-        </div>
+        <>
+              <main className="container min-h-screen flex items-start p-4">
+                <CreatePost  />
+            </main>
+        </>
     )
 }
