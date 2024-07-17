@@ -20,8 +20,11 @@ export default function Home() {
      */
     return (
         <>
-              <div className="mx-72 min-h-screen flex items-start p-5 bg-slate-100">
-                <CreatePost  />
+            <div className="mx-72 min-h-screen flex flex-col items-start p-5 bg-slate-100">
+                <div className="w-full">
+                    <CreatePost />
+                </div>
+                
             </div>
         </>
     )

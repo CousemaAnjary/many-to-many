@@ -4,7 +4,9 @@ import { Button } from "../ui/button"
 import { BsImage } from "react-icons/bs"
 import { Textarea } from "../ui/textarea"
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from "../ui/dialog"
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+
+
 
 export default function CreatePost() {
     /**
@@ -12,7 +14,6 @@ export default function CreatePost() {
      */
 
     const [open, setOpen] = useState(false)
-    const [file, setFile] = useState(null)
 
 
 
@@ -23,16 +24,13 @@ export default function CreatePost() {
         setOpen(!open)
     }
 
-    const handleRemoveFile = () => {
-        setFile(null)
-    }
 
 
     /**
      * ! AFFICHAGE (render) de l'application
      */
     return (
-        <div className="bg-white p-4 rounded-lg shadow mb-4 w-full">
+        <div className="bg-white p-4 rounded-lg shadow mb-4 ">
             <div className="flex items-center space-x-4">
                 <Avatar className="w-10 h-10 shadow">
                     <AvatarImage src="" alt="User Avatar" />
@@ -50,6 +48,7 @@ export default function CreatePost() {
 
             <Dialog open={open} onOpenChange={toggleDialog}>
                 <DialogContent className="max-w-xl p-4">
+
                     <DialogHeader className="flex justify-between items-center">
                         <DialogTitle>Créer une publication</DialogTitle>
                     </DialogHeader>
@@ -72,28 +71,22 @@ export default function CreatePost() {
                     />
 
                     <div className="border rounded-lg p-4 mb-4">
-                        {file ? (
-                            <div className="flex items-center justify-between">
-                                <p className="text-gray-500"></p>
-                                <Button variant="ghost" onClick={handleRemoveFile}>
-
-                                </Button>
-                            </div>
-                        ) : (
-                            <label className="flex flex-col items-center justify-center h-32 border-dashed border-2 border-gray-300 rounded-lg cursor-pointer">
-                                <input
-                                    type="file"
-                                    className="hidden"
-                                // onChange={handleFileChange}
-                                />
-                                <BsImage className="text-gray-500 w-10 h-10 mb-2" />
-                                <p className="text-gray-500">Ajouter des photos/vidéos</p>
-                                <p className="text-gray-500">ou faites glisser-déposer</p>
-                            </label>
-                        )}
+                        <label className="flex flex-col items-center justify-center h-32 border-dashed border-2 border-gray-300 rounded-lg cursor-pointer">
+                            <input
+                                type="file"
+                                className="hidden"
+                            // onChange={handleFileChange}
+                            />
+                            <BsImage className="text-gray-500 w-10 h-10 mb-2" />
+                            <p className="text-gray-500">Ajouter des photos/vidéos</p>
+                            <p className="text-gray-500">ou faites glisser-déposer</p>
+                        </label>
                     </div>
 
-                    <Button className="w-full bg-cyan-700 text-white">Publier</Button>
+                    <DialogFooter>
+                        <Button className="w-full bg-cyan-700 text-white">Publier</Button>
+                    </DialogFooter>
+
                 </DialogContent>
             </Dialog>
         </div>
