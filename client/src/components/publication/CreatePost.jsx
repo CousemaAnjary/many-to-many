@@ -1,10 +1,10 @@
 import { useState } from "react"
-import { Input } from "./ui/input"
-import { Button } from "./ui/button"
+import { Input } from "../ui/input"
+import { Button } from "../ui/button"
 import { BsImage } from "react-icons/bs"
-import { Textarea } from "../components/ui/textarea"
-import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from "../components/ui/dialog"
+import { Textarea } from "../ui/textarea"
+import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, } from "../ui/dialog"
 
 export default function CreatePost() {
     /**
