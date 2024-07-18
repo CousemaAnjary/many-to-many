@@ -18,6 +18,7 @@ export default function CreatePost() {
         setOpen(!open)
     }
 
+    
     /**
      * ! AFFICHAGE (render) de l'application
      */
