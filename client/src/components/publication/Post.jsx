@@ -12,14 +12,14 @@ export default function Post() {
     /**
      * ! STATE (état, données) de l'application
      */
-    const [showComments, setShowComments] = useState(false);
+    const [showComments, setShowComments] = useState(false)
 
     /**
      * ! COMPORTEMENT (méthodes, fonctions) de l'application
      */
     // Afficher ou masquer les commentaires
     const toggleComments = () => {
-        setShowComments(!showComments);
+        setShowComments(!showComments)
     };
 
     /**
