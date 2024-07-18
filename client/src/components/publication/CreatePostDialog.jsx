@@ -22,7 +22,6 @@ export default function CreatePostDialog({ open, onClose }) {
      */
 
 
-
     /**
      * ! AFFICHAGE (render) de l'application
      */
@@ -70,5 +69,5 @@ export default function CreatePostDialog({ open, onClose }) {
                 </DialogFooter>
             </DialogContent>
         </Dialog>
-    );
+    )
 }
