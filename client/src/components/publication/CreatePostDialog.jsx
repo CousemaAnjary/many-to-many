@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Button } from "../ui/button"
 import { BsImage } from "react-icons/bs"
 import { Textarea } from "../ui/textarea"
@@ -5,10 +6,15 @@ import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 
+CreatePostDialog.propTypes = {
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+}
+
 export default function CreatePostDialog({ open, onClose }) {
     return (
         <Dialog open={open} onOpenChange={onClose}>
-            
+
             <DialogContent className="max-w-xl">
                 <DialogHeader>
                     <DialogTitle className="text-center">Créer une publication</DialogTitle>
