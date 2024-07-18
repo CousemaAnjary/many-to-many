@@ -67,6 +67,7 @@ export default function CreatePostDialog({ open, onClose }) {
                 <DialogFooter>
                     <Button className="w-full bg-cyan-700 text-white">Publier</Button>
                 </DialogFooter>
+                
             </DialogContent>
         </Dialog>
     )
