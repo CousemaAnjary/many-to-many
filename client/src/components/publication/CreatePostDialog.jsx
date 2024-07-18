@@ -7,11 +7,25 @@ import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "
 
 
 CreatePostDialog.propTypes = {
-    open: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired, // Ouverture du dialogue : type booléen
+    onClose: PropTypes.func.isRequired, //Fermeture du dialogue : type fonction
 }
 
 export default function CreatePostDialog({ open, onClose }) {
+    /**
+     * ! STATE (état, données) de l'application
+     */
+
+
+    /**
+     * ! COMPORTEMENT (méthodes, fonctions) de l'application
+     */
+
+
+
+    /**
+     * ! AFFICHAGE (render) de l'application
+     */
     return (
         <Dialog open={open} onOpenChange={onClose}>
 
