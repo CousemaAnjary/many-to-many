@@ -26,7 +26,7 @@ export default function Post() {
      * ! AFFICHAGE (render) de l'application
      */
     return (
-        <Card className="mb-4 max-w-full p-4 shadow">
+        <Card className="max-w-full p-4 shadow">
             <div className="flex items-start justify-between p-4">
                 <div className="flex items-center space-x-4">
                     <Avatar className="w-10 h-10 shadow">

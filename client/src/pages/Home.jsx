@@ -26,7 +26,7 @@ export default function Home() {
                     <CreatePost />
                 </div>
 
-                <div className="w-full">
+                <div className="w-full mt-3">
                     <Post />
                 </div>
             </div>
