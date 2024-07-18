@@ -1,11 +1,11 @@
 import { useState } from "react"
-import { Button } from "./ui/button"
+import { Button } from "../ui/button"
 import PostComment from "./PostComment"
 import { FaHeart } from "react-icons/fa"
 import { MoreHorizontal } from "lucide-react"
 import { BsHeart, BsChat, BsShare } from "react-icons/bs"
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
-import { Card, CardContent, CardFooter } from "../components/ui/card"
+import { Card, CardContent, CardFooter } from "../ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
 
 export default function Post() {

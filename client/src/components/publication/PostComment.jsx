@@ -1,7 +1,7 @@
-import { Button } from "./ui/button"
+import { Button } from "../ui/button"
 import { Heart } from "lucide-react"
-import { Textarea } from "./ui/textarea"
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+import { Textarea } from "../ui/textarea"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
 
 

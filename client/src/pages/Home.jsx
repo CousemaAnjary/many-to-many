@@ -1,4 +1,5 @@
 import CreatePost from "@/components/publication/CreatePost"
+import Post from "@/components/publication/Post"
 
 
 
@@ -24,7 +25,10 @@ export default function Home() {
                 <div className="w-full">
                     <CreatePost />
                 </div>
-                
+
+                <div className="w-full">
+                    <Post />
+                </div>
             </div>
         </>
     )
