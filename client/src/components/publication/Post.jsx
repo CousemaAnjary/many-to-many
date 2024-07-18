@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { Button } from "./ui/button"
-import { Textarea } from "./ui/textarea"
+import PostComment from "./PostComment"
 import { FaHeart } from "react-icons/fa"
-import { MoreHorizontal, Heart } from "lucide-react"
+import { MoreHorizontal } from "lucide-react"
 import { BsHeart, BsChat, BsShare } from "react-icons/bs"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { Card, CardContent, CardFooter } from "../components/ui/card"
@@ -12,16 +12,15 @@ export default function Post() {
     /**
      * ! STATE (état, données) de l'application
      */
-    const [showComments, setShowComments] = useState(false)
+    const [showComments, setShowComments] = useState(false);
 
-    
     /**
      * ! COMPORTEMENT (méthodes, fonctions) de l'application
      */
+    // Afficher ou masquer les commentaires
     const toggleComments = () => {
-        setShowComments(!showComments)
-    }
-
+        setShowComments(!showComments);
+    };
 
     /**
      * ! AFFICHAGE (render) de l'application
@@ -29,7 +28,6 @@ export default function Post() {
     return (
         <Card className="mb-4 max-w-full p-4 shadow">
             <div className="flex items-start justify-between p-4">
-
                 <div className="flex items-center space-x-4">
                     <Avatar className="w-10 h-10 shadow">
                         <AvatarImage src="" alt="Company Logo" />
@@ -37,7 +35,25 @@ export default function Post() {
                     </Avatar>
                     <div className="flex flex-col">
                         <p className="text-sm font-semibold">Cousema Anjary</p>
-                        <p className="text-xs text-gray-500">4 h · <span className="inline-block"><svg xmlns="http://www.w3.org/2000/svg" className="inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg></span></p>
+                        <p className="text-xs text-gray-500">
+                            4 h ·{" "}
+                            <span className="inline-block">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="inline-block"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={2}
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M12 4v16m8-8H4"
+                                    />
+                                </svg>
+                            </span>
+                        </p>
                     </div>
                 </div>
 
@@ -78,45 +94,7 @@ export default function Post() {
                 </Button>
             </CardFooter>
 
-            {showComments && (
-                <div className="border-t mt-2 pt-2">
-                    <div className="bg-white p-2 rounded-lg mb-2 shadow">
-                        <div className="flex items-center space-x-2">
-                            <Avatar className="shadow">
-                                <AvatarImage className="w-8 h-8 rounded-full" src="" />
-                                <AvatarFallback>UA</AvatarFallback>
-                            </Avatar>
-
-                            <div className="flex items-center">
-                                <span className="text-sm font-semibold leading-7 text-black mr-2">Cousema Anjary</span>
-                                <span className="text-gray-500 text-sm">55 min</span>
-                            </div>
-                        </div>
-                        <p className="text-gray-700 ms-12 mb-2">Tu es beau</p>
-                        <div className="flex items-center ms-12">
-                            <Button variant="ghost" size="sm" className="mr-2">
-                                <Heart size={16} className="mr-1" />
-                                Like
-                            </Button>
-                            <p className="text-sm text-gray-500 ml-4">12 likes</p>
-                        </div>
-
-                    </div>
-                    <div className="flex items-center space-x-4 mb-4 mt-4">
-                        <Avatar className="shadow">
-                            <AvatarImage src="" alt="Votre Avatar" />
-                            <AvatarFallback>AV</AvatarFallback>
-                        </Avatar>
-                        <Textarea
-                            placeholder="Écrivez un commentaire..."
-                            className="flex-1 bg-gray-200 outline-none"
-                            rows={1}
-                        />
-                        <Button className="bg-cyan-700 text-white">Envoyer</Button>
-                    </div>
-                </div>
-            )}
+            {showComments && <PostComment />}
         </Card>
-    )
+    );
 }
-
