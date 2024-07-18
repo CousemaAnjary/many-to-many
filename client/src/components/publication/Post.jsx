@@ -14,6 +14,7 @@ export default function Post() {
      */
     const [showComments, setShowComments] = useState(false)
 
+    
     /**
      * ! COMPORTEMENT (méthodes, fonctions) de l'application
      */
@@ -25,11 +26,6 @@ export default function Post() {
     /**
      * ! AFFICHAGE (render) de l'application
      */
-
-
-
-
-
     return (
         <Card className="mb-4 max-w-full p-4 shadow">
             <div className="flex items-start justify-between p-4">
