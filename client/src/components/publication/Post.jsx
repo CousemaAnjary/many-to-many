@@ -96,5 +96,5 @@ export default function Post() {
 
             {showComments && <PostComment />}
         </Card>
-    );
+    )
 }
