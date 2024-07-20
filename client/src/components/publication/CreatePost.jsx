@@ -10,6 +10,7 @@ export default function CreatePost() {
      */
     const [open, setOpen] = useState(false)
 
+    
     /**
      * ! COMPORTEMENT (méthodes, fonctions) de l'application
      */
