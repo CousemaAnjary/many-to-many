@@ -20,7 +20,7 @@ export default function Post() {
     // Afficher ou masquer les commentaires
     const toggleComments = () => {
         setShowComments(!showComments)
-    };
+    }
 
     /**
      * ! AFFICHAGE (render) de l'application
