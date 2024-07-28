@@ -19,7 +19,7 @@ export default function Home() {
      */
     return (
         <>
-            <div className="mx-96 min-h-screen flex flex-col items-start p-6 bg-slate-100">
+            <div className="mx-96 min-h-screen flex flex-col items-start px-40 py-10 bg-slate-100">
                 <div className="w-full">
                     <CreatePost />
                 </div>
